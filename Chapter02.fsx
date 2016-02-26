@@ -26,3 +26,34 @@ let rec isVegetarian (s) =
   | Tomato(x) -> isVegetarian x
 
 (isVegetarian : ShishKebab -> bool)
+
+// 64
+type Shish<'a> =
+  | Bottom of 'a
+  | Onion of Shish<'a>
+  | Lamb of Shish<'a>
+  | Tomato of Shish<'a>
+
+// 67
+type Rod = Dagger | Fork | Sword
+type Plate = GoldPlate | SilverPlate | BrassPlate
+
+// 73
+let rec isVeggie (s) =
+  match s with
+  | Bottom(b) -> true
+  | Onion(x) -> isVeggie(x)
+  | Lamb(_) -> false
+  | Tomato(x) -> isVeggie(x)
+
+(isVeggie : Shish<'a> -> bool)
+
+// 98
+let rec whatBottom (s) =
+  match s with
+  | Bottom(b) -> b
+  | Onion(x) -> whatBottom(x)
+  | Lamb(x) -> whatBottom(x)
+  | Tomato(x) -> whatBottom(x)
+
+(whatBottom : Shish<'a> -> 'a)
