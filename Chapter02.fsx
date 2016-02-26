@@ -12,7 +12,7 @@ let rec only_onions (s) =
   match s with
   | Skewer -> true
   | Onion(x) -> only_onions x
-  | Lamb(x) -> false
-  | Tomato(x) -> false
+  | Lamb(_) -> false
+  | Tomato(_) -> false
 
 (only_onions : ShishKebab -> bool)
