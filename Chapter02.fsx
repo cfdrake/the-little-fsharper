@@ -16,3 +16,13 @@ let rec only_onions (s) =
   | Tomato(_) -> false
 
 (only_onions : ShishKebab -> bool)
+
+// 63
+let rec is_vegetarian (s) = 
+  match s with
+  | Skewer -> true
+  | Onion(x) -> is_vegetarian x
+  | Lamb(_) -> false
+  | Tomato(x) -> is_vegetarian x
+
+(is_vegetarian : ShishKebab -> bool)
