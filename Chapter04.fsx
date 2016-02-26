@@ -17,6 +17,7 @@ let addASteak = function
 
 (addASteak : Meza -> (Meza * Main))
 
+// Less terse version of addASteak.
 let addASteak' (m) = (m, Steak)
 
 // 42
@@ -56,4 +57,5 @@ let hasSteak (meza:Meza, meal:Main, dessert:Dessert) =
   | (_, _, _) -> false
 
 // 67
+// Type-constrained version of addASteak'.
 let addASteak''(x:Meza) = (x, Steak)
