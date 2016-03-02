@@ -17,7 +17,7 @@ let addASteak = function
 
 (addASteak : Meza -> (Meza * Main))
 
-// Less terse version of addASteak.
+// Less verbose version of addASteak.
 let addASteak' (m) = (m, Steak)
 
 // 42
